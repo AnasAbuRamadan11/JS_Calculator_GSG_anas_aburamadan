@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+   
+
+</head>
+
+<body>
+    <div class="container">
+
+        <input type="text" readonly id="display" value="0" />
+
+        <div class="content first">
+
+            <span class="num clear" onclick="window.location.reload()">c</span>
+            <span class="num" onclick="getOperator('%')">%</span>
+            <span class="num" onclick="getOperator('/')">&#xF7;</span>
+        </div>
+        <div class="content">
+
+            <span class="num" onclick="getNumber(7)">7</span>
+            <span class="num" onclick="getNumber(8)">8</span>
+            <span class="num" onclick="getNumber(9)">9</span>
+            <span class="num" onclick="getOperator('*')"> &#215;</span>
+        </div>
+        <div class="content">
+
+            <span class="num" onclick="getNumber(4)">4</span>
+            <span class="num" onclick="getNumber(5)">5</span>
+            <span class="num" onclick="getNumber(6)">6</span>
+            <span class="num plus" onclick="getOperator('-')"> -</span>
+        </div>
+        <div class="content">
+
+            <span class="num" onclick="getNumber(2)">2</span>
+            <span class="num" onclick="getNumber(1)">1</span>
+            <span class="num" onclick="getNumber(3)">3</span>
+            <span class="num plus" onclick="getOperator('+')">+</span>
+        </div>
+        <div class="content">
+
+            <span class="num" onclick="getNumber(0)">0</span>
+            <span class="num" onclick="getNumber('00')">00</span>
+            <span class="num" onclick="getNumber('.')">.</span>
+            <span class="num equal" onclick="Calculate()"> =</span>
+        </div>
+
+        <div class="container2">
+
+            <span class="num" onclick="getOperator('₪ to $')">₪ to $</span>
+            <span class="num" onclick="getOperator('₪ to €')">₪ to €</span>
+            <span class="num" onclick="getOperator('$ to €')">$ to €</span>
+            <span class="num equal" onclick="getOperator('€ to $')"> € to $</span>
+            <span class="num equal" onclick="getOperator('₪ to £')"> ₪ to £</span>
+        </div>
+    </div>
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
